@@ -9,13 +9,6 @@
 # List of rpmfusion packages can be found here:
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/43/x86_64/repoview/index.html&protocol=https&redirect=1
 
-# install niri and dms
-dnf5 -y copr enable avengemedia/dms && \
-dnf5 -y install \
-    niri \
-    dms && \
-dnf5 -y copr disable avengemedia/dms && \
-systemctl --user add-wants niri.service dms
 
 
 # Use a COPR Example:

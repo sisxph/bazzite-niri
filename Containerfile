@@ -35,6 +35,17 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=tmpfs,dst=/tmp \
     /ctx/build.sh
 
+COPY system_files/desktop/niri /
+
+
+RUN dnf5 -y copr enable avengemedia/dms && \
+    dnf5 -y install \
+        niri \
+        dms && \
+    dnf5 -y copr disable avengemedia/dms && \
+    # systemctl --user add-wants niri.service dms
+
+
 ### LINTING
 ## Verify final image and contents are correct.
 RUN bootc container lint
