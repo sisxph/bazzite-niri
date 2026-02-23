@@ -42,7 +42,7 @@ RUN dnf5 -y copr enable avengemedia/dms && \
     dnf5 -y install \
         niri \
         dms && \
-    dnf5 -y copr disable avengemedia/dms && \
+    dnf5 -y copr disable avengemedia/dms
     # systemctl --user add-wants niri.service dms
 
 
