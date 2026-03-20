@@ -20,7 +20,7 @@ ifneq ($(KERNELRELEASE),)
 		ccflags-y += -DLINUX_VERSION_SUBLEVEL=$(SUBLEVEL)
 	endif
 else
-	KERNELDIR ?= /lib/modules/$(shell uname -r)/build
+	KERNELDIR ?= /lib/modules/*/build
 	PWD :=$(shell pwd)
 	TARGET_PATH := kernel/drivers/net/usb
 	INBOXDRIVER := $(shell find $(subst build,$(TARGET_PATH),$(KERNELDIR)) -name r8152.ko.* -type f)
@@ -57,4 +57,3 @@ install_rules:
 	install --group=root --owner=root --mode=0644 $(RULEFILE) $(RULEDIR)
 
 endif
-
