@@ -18,6 +18,7 @@ dnf5 -y copr enable avengemedia/dms && \
     # systemctl --user add-wants niri.service dms
 cd /r8152
 make all
+dracut -f
 rm -rf /r8152
 
 
