@@ -12,7 +12,6 @@
 
 dnf5 -y copr enable avengemedia/dms && \
     dnf5 -y install \
-        kernel-devel \
         niri \
         dms && \
     dnf5 -y copr disable avengemedia/dms
@@ -20,7 +19,6 @@ dnf5 -y copr enable avengemedia/dms && \
 cd /r8152
 make all
 rm -rf /r8152
-dnf5 -y remove kernel-devel
 
 
 # Use a COPR Example:
