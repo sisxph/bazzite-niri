@@ -35,21 +35,6 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=tmpfs,dst=/tmp \
     /ctx/build.sh
 
-COPY system_files/desktop/niri / \
-     r8152 /
-
-
-RUN dnf5 -y copr enable avengemedia/dms && \
-    dnf5 -y install \
-        kernel-devel \
-        niri \
-        dms && \
-    dnf5 -y copr disable avengemedia/dms
-    # systemctl --user add-wants niri.service dms
-RUN cd /r8152
-RUN make all
-RUN rm -rf /r8152
-RUN dnf5 -y remove kernel-devel
 ### LINTING
 ## Verify final image and contents are correct.
 RUN bootc container lint
