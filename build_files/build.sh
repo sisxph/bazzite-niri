@@ -10,8 +10,8 @@
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/43/x86_64/repoview/index.html&protocol=https&redirect=1
 
 
-dnf5 -y copr enable avengemedia/dms \
-    sisyph/kmod-r8152 && \
+dnf5 -y copr enable avengemedia/dms && \
+dnf5 -y copr enable sisyph/kmod-r8152 && \
     dnf5 -y install \
         niri \
         dms \
