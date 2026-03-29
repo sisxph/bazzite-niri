@@ -10,16 +10,14 @@
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/43/x86_64/repoview/index.html&protocol=https&redirect=1
 
 
-dnf5 -y copr enable avengemedia/dms && \
+dnf5 -y copr enable avengemedia/dms \
+    sisyph/kmod-r8152 && \
     dnf5 -y install \
         niri \
-        dms && \
-    dnf5 -y copr disable avengemedia/dms
+        dms \
+        r8152 && \
+    dnf5 -y copr disable avengemedia/dms sisyph/kmod-r8152
     # systemctl --user add-wants niri.service dms
-cd /r8152
-make all
-dracut -f
-rm -rf /r8152
 
 
 # Use a COPR Example:
