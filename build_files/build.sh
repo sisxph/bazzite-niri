@@ -14,8 +14,7 @@ dnf5 -y copr enable avengemedia/dms && \
 dnf5 -y copr enable sisyph/kmod-r8152 && \
     dnf5 -y install \
         niri \
-        dms \
-        r8152 && \
+        dms && \
     dnf5 -y copr disable avengemedia/dms sisyph/kmod-r8152
     # systemctl --user add-wants niri.service dms
 
