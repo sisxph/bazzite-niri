@@ -13,6 +13,7 @@
 dnf5 -y copr enable avengemedia/dms && \
     dnf5 -y install \
         niri \
+        niri-settings \
         nautilus \
         pcmanfm-qt\
         dms \
