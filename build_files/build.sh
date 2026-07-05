@@ -16,7 +16,9 @@ dnf5 -y copr enable avengemedia/dms && \
         dms \
         power-profiles-daemon \
         cups-pk-helper \
-        kf6-kimageformats && \
+        kf6-kimageformats \
+        fprintd \
+        khal && \
     dnf5 -y copr disable avengemedia/dms
     # systemctl --user add-wants niri.service dms
 
