@@ -15,8 +15,6 @@ dnf5 -y copr enable avengemedia/dms && \
         niri \
         niri-settings \
         nautilus \
-        nemo \
-        pcmanfm-qt\
         dms \
         power-profiles-daemon \
         cups-pk-helper \
