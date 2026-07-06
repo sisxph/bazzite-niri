@@ -11,7 +11,7 @@
 
 
 dnf5 -y copr enable avengemedia/dms && \
-    dnf5 -y install \
+    dnf5 -y --setopt=install_weak_deps=False install \
         niri \
         niri-settings \
         nautilus \
