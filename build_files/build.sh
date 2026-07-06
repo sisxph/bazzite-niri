@@ -15,7 +15,11 @@ dnf5 -y copr enable avengemedia/dms && \
         niri \
         niri-settings \
         nautilus \
+        ghostty \
         dms \
+        danksearch \
+        matugen \
+        cava \
         power-profiles-daemon \
         cups-pk-helper \
         kf6-kimageformats \
