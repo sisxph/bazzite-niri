@@ -12,14 +12,12 @@
 
 dnf5 -y copr enable avengemedia/dms && \
     dnf5 -y --setopt=install_weak_deps=False install \
-        niri \
+        niri && \
+    dnf5 -y install \
         niri-settings \
         nautilus \
         ghostty \
         dms \
-        danksearch \
-        matugen \
-        cava \
         power-profiles-daemon \
         cups-pk-helper \
         kf6-kimageformats \
