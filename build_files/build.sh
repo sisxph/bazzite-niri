@@ -15,7 +15,6 @@ dnf5 -y copr enable avengemedia/dms && \
         niri && \
     dnf5 -y install \
         xdg-desktop-portal-gnome \
-        gamemode \
         niri-settings \
         nautilus \
         ghostty \
