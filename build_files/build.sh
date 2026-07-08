@@ -26,7 +26,7 @@ dnf5 -y copr enable avengemedia/dms && \
         fprintd \
         khal && \
     dnf5 -y remove \
-    firefox && \
+        firefox && \
     dnf5 -y copr disable avengemedia/dms
     # systemctl --user add-wants niri.service dms
 
