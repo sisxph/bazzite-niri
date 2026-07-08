@@ -15,6 +15,7 @@ dnf5 -y copr enable avengemedia/dms && \
         niri && \
     dnf5 -y install \
         xdg-desktop-portal-gnome \
+        gnome-disk-utility \
         niri-settings \
         nautilus \
         ghostty \
@@ -24,6 +25,8 @@ dnf5 -y copr enable avengemedia/dms && \
         kf6-kimageformats \
         fprintd \
         khal && \
+    dnf5 -y remove \
+    firefox && \
     dnf5 -y copr disable avengemedia/dms
     # systemctl --user add-wants niri.service dms
 
