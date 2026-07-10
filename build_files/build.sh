@@ -22,6 +22,7 @@ dnf5 -y copr enable avengemedia/dms && \
         dms \
         dms-greeter \
         dankcalendar-git \
+        dgop \
         power-profiles-daemon \
         cups-pk-helper \
         kf6-kimageformats \
