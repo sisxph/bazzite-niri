@@ -20,6 +20,8 @@ dnf5 -y copr enable avengemedia/dms && \
         nautilus \
         ghostty \
         dms \
+        dms-greeter \
+        dankcalendar-git \
         power-profiles-daemon \
         cups-pk-helper \
         kf6-kimageformats \
