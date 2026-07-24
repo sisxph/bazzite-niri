@@ -12,7 +12,8 @@
 
 dnf5 -y copr enable avengemedia/dms && \
     dnf5 -y --setopt=install_weak_deps=False install \
-        niri && \
+        niri \
+        kde-connect && \
     dnf5 -y install \
         xdg-desktop-portal-gnome \
         gnome-disk-utility \
