@@ -13,6 +13,7 @@
 dnf5 -y copr enable avengemedia/dms && \
     dnf5 -y --setopt=install_weak_deps=False install \
         niri \
+        FreeRDP \
         gnome-keyring \
         gnome-remote-desktop && \
     dnf5 -y install \
