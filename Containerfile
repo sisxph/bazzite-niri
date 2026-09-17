@@ -5,6 +5,12 @@ COPY build_files /
 # Base Image
 FROM ghcr.io/ublue-os/base-main:latest
 
+# Homebrew integration files and prebuilt Homebrew archive
+FROM ghcr.io/ublue-os/brew:latest AS brew
+# Import Homebrew's systemd units, setup script, profile integration,
+# tmpfiles configuration, and /usr/share/homebrew.tar.zst
+COPY --from=brew /system_files /
+
 ## Other possible base images include:
 # FROM ghcr.io/ublue-os/bazzite:latest
 # FROM ghcr.io/ublue-os/bluefin-nvidia:stable
