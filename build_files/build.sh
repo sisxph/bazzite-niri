@@ -27,7 +27,7 @@ dnf5 -y copr enable avengemedia/dms && \
         cups-pk-helper \
         kf6-kimageformats \
         fprintd \
-        bluez \
+        bluez-deprecated \
         khal && \
     dnf5 -y remove \
         firefox && \
